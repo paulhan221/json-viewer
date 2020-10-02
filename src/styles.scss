@@ -1,0 +1,53 @@
+.app {
+  color: #2b2b2b;
+  margin: 48px;
+  .arrow {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;  
+    border-bottom: 4px solid black;
+    transform: rotate(90deg);
+    margin-top: 9px;
+    margin-right: 3px;
+    margin-left: -11px;
+  
+    &.expanded {
+      transform: rotate(-180deg);   
+    }
+  }
+  .key-value {
+    display: flex;
+    margin-right: 24px;
+    .key-container {
+      display: flex;
+      color: #a613c4;
+      &.clickable {
+        cursor: pointer;
+      }
+    }
+    .value {
+      &.string {
+        color: #e50000;
+        &::before {
+          content: "\""
+        }
+        &::after {
+          content: "\""
+        }
+      }
+      &.number {
+        color: #2d38ff;
+      }
+      &.boolean {
+        color: #2d38ff;
+      }
+    }
+  }
+  .array-value {
+    margin-left: 24px;
+  }
+  .object-type {
+    margin-left: 24px;
+  }
+}
